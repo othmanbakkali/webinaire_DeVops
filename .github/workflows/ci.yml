@@ -76,9 +76,20 @@ jobs:
           username: ${{ secrets.SSH_USER }}
           password: ${{ secrets.SSH_PASSWORD }}
           script: |
-            cd ~/webinaire_devops
+            if [ ! -d "$HOME/webinaire_devops/.git" ]; then
+              if [ -f "$HOME/webinaire_devops/.env" ]; then
+                cp "$HOME/webinaire_devops/.env" /tmp/.env_backup
+              fi
+              rm -rf $HOME/webinaire_devops
+              git clone https://github.com/othmanbakkali/webinaire_DeVops.git $HOME/webinaire_devops
+              if [ -f "/tmp/.env_backup" ]; then
+                mv /tmp/.env_backup $HOME/webinaire_devops/.env
+              fi
+            fi
+            cd $HOME/webinaire_devops
             git pull origin main
             docker compose up -d --build
             docker compose exec -T web python manage.py migrate
             docker compose exec -T web python manage.py collectstatic --noinput
+
 
