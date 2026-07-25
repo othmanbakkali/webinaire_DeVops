@@ -28,6 +28,13 @@ DEBUG = os.getenv('DEBUG', 'True') == 'True'
 
 ALLOWED_HOSTS = ['*']
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://webinairedevops.sdbo.ma',
+    'http://webinairedevops.sdbo.ma',
+    'http://127.0.0.1:8333',
+]
+
+
 
 # Application definition
 
