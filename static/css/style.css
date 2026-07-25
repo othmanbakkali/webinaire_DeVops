@@ -2204,4 +2204,65 @@ a {
   overflow-x: auto;
 }
 
+/* Tech and Partners Logos Section */
+.tech-logos-section {
+  margin: 3rem auto;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--border-glass);
+  border-radius: 16px;
+}
+
+.logos-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 2rem;
+}
+
+.logo-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  opacity: 0.75;
+  transition: all 0.3s ease;
+  color: var(--text-gray-300);
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.logo-item:hover {
+  opacity: 1;
+  color: var(--text-white);
+  transform: translateY(-2px);
+}
+
+.tech-logo {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.logo-icon-circle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--neon-cyan), #0f766e);
+  color: #0f172a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 0.9rem;
+  box-shadow: 0 0 10px rgba(6, 182, 212, 0.3);
+}
+
+.partner-logo .logo-icon-circle {
+  font-family: var(--font-mono);
+}
+
+
 
