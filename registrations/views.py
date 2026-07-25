@@ -56,3 +56,14 @@ def register_api_view(request):
         return JsonResponse({'success': False, 'error': 'Format de données invalide.'}, status=400)
     except Exception as e:
         return JsonResponse({'success': False, 'error': 'Une erreur est survenue lors de l\'inscription.'}, status=500)
+
+
+def health_check_view(request):
+    from django.db import connection
+    try:
+        with connection.cursor() as cursor:
+            cursor.execute("SELECT 1")
+        return JsonResponse({'status': 'healthy', 'database': 'connected'}, status=200)
+    except Exception as e:
+        return JsonResponse({'status': 'unhealthy', 'database': str(e)}, status=500)
+

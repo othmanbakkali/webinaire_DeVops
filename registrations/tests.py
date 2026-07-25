@@ -87,3 +87,12 @@ class RegistrationTests(TestCase):
         )
         self.assertEqual(response.status_code, 400)
         self.assertIn("déjà inscrite", response.json()['error'])
+
+    def test_health_check_endpoint(self):
+        """Verify the health check endpoint returns 200 and indicates healthy status."""
+        response = self.client.get(reverse('health_check'))
+        self.assertEqual(response.status_code, 200)
+        data = response.json()
+        self.assertEqual(data['status'], 'healthy')
+        self.assertEqual(data['database'], 'connected')
+
