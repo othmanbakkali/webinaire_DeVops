@@ -1,0 +1,1597 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>Webinaire DevOps Gratuit - IT Tech Académie | Dr. Othman Bakkali Yedri</title>
+  <meta name="description" content="Développer une application, c’est bien. Savoir la versionner, la déployer et l’automatiser, c’est encore mieux. Rejoignez-nous pour un webinaire DevOps exclusif animé par Dr. Othman Bakkali Yedri.">
+  <meta name="keywords" content="DevOps, Git, Docker, CI/CD, Cloud, Webinaire, IT Tech Academie, Rabat, Maroc, Othman Bakkali">
+  <meta name="author" content="IT Tech Académie">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="https://img.icons8.com/color/48/000000/cloud-development.png">
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+  <!-- Background Glowing Orbs (Ambient Light Decor) -->
+  <div class="ambient-bg">
+    <div class="glow-orb glow-orb-1"></div>
+    <div class="glow-orb glow-orb-2"></div>
+    <div class="glow-orb glow-orb-3"></div>
+  </div>
+
+  <!-- Sticky Glassmorphic Navbar -->
+  <header class="navbar">
+    <div class="container">
+      <a href="#" class="logo-wrapper">
+        <div class="logo-icon">&lt;/&gt;</div>
+        <span class="logo-text">IT Tech Académie</span>
+      </a>
+      <nav class="nav-links">
+        <a href="#programme" class="nav-link">Programme</a>
+        <a href="#cours" class="nav-link">Cours</a>
+        <a href="#atelier" class="nav-link">Atelier</a>
+        <a href="#formateur" class="nav-link">Formateur</a>
+        <a href="#participer" class="nav-link">Participer</a>
+      </nav>
+      <a href="#inscription" class="btn-nav">S'inscrire</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero & Countdown Section -->
+    <section class="hero container">
+      <div class="badge-live">
+        <span class="pulse-dot"></span>
+        Webinaire Gratuit
+      </div>
+      
+      <h1>Découvrez le Parcours <span class="gradient">DevOps</span></h1>
+      
+      <p class="hero-subtitle">
+        "Développer une application, c’est bien. <strong>Savoir la versionner, la déployer et l’automatiser</strong>, c’est encore mieux."
+      </p>
+
+      <!-- Live Countdown Widget -->
+      <div class="countdown-container">
+        <div class="countdown-title">Lancement du webinaire dans</div>
+        <div class="countdown-digits">
+          <div class="digit-box">
+            <span class="digit-number" id="days">00</span>
+            <span class="digit-label">Jours</span>
+          </div>
+          <div class="digit-separator">:</div>
+          <div class="digit-box">
+            <span class="digit-number" id="hours">00</span>
+            <span class="digit-label">Heures</span>
+          </div>
+          <div class="digit-separator">:</div>
+          <div class="digit-box">
+            <span class="digit-number" id="minutes">00</span>
+            <span class="digit-label">Minutes</span>
+          </div>
+          <div class="digit-separator">:</div>
+          <div class="digit-box">
+            <span class="digit-number" id="seconds">00</span>
+            <span class="digit-label">Secondes</span>
+          </div>
+        </div>
+        <div class="event-started-message">Le webinaire a commencé ! Rejoignez le direct ci-dessous.</div>
+      </div>
+
+      <!-- Social Proof Registrations Stats -->
+      <div class="social-proof-bar">
+        Rejoignez les <span id="live-count" class="highlight">{{ registration_count|default:"37" }}</span> professionnels et étudiants déjà inscrits !
+      </div>
+
+      <!-- Event Details Dashboard Grid -->
+      <div class="event-meta-dashboard">
+        <div class="meta-card">
+          <div class="meta-icon-wrapper">
+            <i data-lucide="calendar"></i>
+          </div>
+          <h3>Date</h3>
+          <p>Samedi 25 Juillet 2026</p>
+        </div>
+        <div class="meta-card">
+          <div class="meta-icon-wrapper">
+            <i data-lucide="clock"></i>
+          </div>
+          <h3>Heure</h3>
+          <p>19h00 (Rabat - GMT+1)</p>
+        </div>
+        <div class="meta-card">
+          <div class="meta-icon-wrapper">
+            <i data-lucide="hourglass"></i>
+          </div>
+          <h3>Durée</h3>
+          <p>90 minutes</p>
+        </div>
+        <div class="meta-card">
+          <div class="meta-icon-wrapper">
+            <i data-lucide="video"></i>
+          </div>
+          <h3>Format</h3>
+          <p>En ligne (Direct)</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Workspace Grid (Program & Form) -->
+    <div class="container">
+      <div class="main-grid">
+        
+        <!-- Left Side: Interactive Program Timeline -->
+        <section id="programme" class="program-section">
+          <div class="section-title-wrapper">
+            <h2 class="section-title">Au Programme</h2>
+            <p class="section-description">Un plan d'apprentissage structuré et pragmatique pour comprendre les piliers de l'ingénierie DevOps.</p>
+          </div>
+
+          <div class="pipeline-container">
+            <!-- Node 1 -->
+            <div class="pipeline-node active">
+              <div class="pipeline-header">
+                <div class="pipeline-title-group">
+                  <span class="pipeline-num">01</span>
+                  <h3>Comprendre le rôle de DevOps</h3>
+                </div>
+                <i data-lucide="chevron-down" class="pipeline-chevron"></i>
+              </div>
+              <div class="pipeline-details">
+                <p>Découvrez la culture DevOps, la transition des méthodes traditionnelles (Silos) vers la collaboration continue, et la valeur ajoutée pour accélérer les déploiements logiciels.</p>
+                <div class="pipeline-concepts">
+                  <span class="concept-badge">Culture DevOps</span>
+                  <span class="concept-badge">Caly/Alm</span>
+                  <span class="concept-badge">Collaboration</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Node 2 -->
+            <div class="pipeline-node">
+              <div class="pipeline-header">
+                <div class="pipeline-title-group">
+                  <span class="pipeline-num">02</span>
+                  <h3>Versionner son code avec Git</h3>
+                </div>
+                <i data-lucide="chevron-down" class="pipeline-chevron"></i>
+              </div>
+              <div class="pipeline-details">
+                <p>Maîtrisez les fondations du versioning avec Git. Comprenez le cycle de vie des fichiers, la gestion des branches et la collaboration efficace sur GitHub/GitLab.</p>
+                <div class="pipeline-concepts">
+                  <span class="concept-badge">Branching Strategy</span>
+                  <span class="concept-badge">Merge & Rebase</span>
+                  <span class="concept-badge">Pull Requests</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Node 3 -->
+            <div class="pipeline-node">
+              <div class="pipeline-header">
+                <div class="pipeline-title-group">
+                  <span class="pipeline-num">03</span>
+                  <h3>Découvrir Docker et la conteneurisation</h3>
+                </div>
+                <i data-lucide="chevron-down" class="pipeline-chevron"></i>
+              </div>
+              <div class="pipeline-details">
+                <p>Apprenez à empaqueter vos applications et leurs dépendances dans des conteneurs isolés. Découvrez l'écriture de Dockerfile et l'orchestration multi-conteneurs simple.</p>
+                <div class="pipeline-concepts">
+                  <span class="concept-badge">Containers</span>
+                  <span class="concept-badge">Dockerfiles</span>
+                  <span class="concept-badge">Docker Compose</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Node 4 -->
+            <div class="pipeline-node">
+              <div class="pipeline-header">
+                <div class="pipeline-title-group">
+                  <span class="pipeline-num">04</span>
+                  <h3>Comprendre le workflow CI/CD</h3>
+                </div>
+                <i data-lucide="chevron-down" class="pipeline-chevron"></i>
+              </div>
+              <div class="pipeline-details">
+                <p>Découvrez comment automatiser les tests, le build et le déploiement de vos conteneurs. Comprenez les concepts d'Intégration et de Déploiement Continus.</p>
+                <div class="pipeline-concepts">
+                  <span class="concept-badge">CI Pipelines</span>
+                  <span class="concept-badge">CD Automation</span>
+                  <span class="concept-badge">GitHub Actions</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Right Side: Registration Widget -->
+        <section id="inscription" class="registration-form-section">
+          <div class="form-card">
+            <div class="form-header">
+              <h2>Réserver ma Place</h2>
+              <p>Inscrivez-vous pour obtenir votre accès gratuit au direct et recevoir les supports.</p>
+            </div>
+
+            <div id="form-alert" class="form-alert"></div>
+
+            <form id="register-form">
+              {% csrf_token %}
+              <div class="form-group">
+                <label for="full_name" class="form-label">Nom Complet *</label>
+                <div class="input-wrapper">
+                  <input type="text" id="full_name" class="form-input" placeholder="ex: Othman Bakkali" required>
+                  <i data-lucide="user" class="input-icon"></i>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="email" class="form-label">Adresse E-mail *</label>
+                <div class="input-wrapper">
+                  <input type="email" id="email" class="form-input" placeholder="ex: name@example.com" required>
+                  <i data-lucide="mail" class="input-icon"></i>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="role" class="form-label">Votre Profil *</label>
+                <div class="input-wrapper">
+                  <select id="role" class="form-input form-select" required>
+                    <option value="" disabled selected>Sélectionnez votre profil...</option>
+                    <option value="student">Étudiant IT</option>
+                    <option value="developer">Développeur (Débutant/Confirmé)</option>
+                    <option value="cloud_enthusiast">Passionné du Cloud</option>
+                    <option value="other">Autre</option>
+                  </select>
+                  <i data-lucide="briefcase" class="input-icon"></i>
+                  <i data-lucide="chevron-down" class="select-arrow"></i>
+                </div>
+              </div>
+
+              <button type="submit" id="btn-submit" class="btn-submit">
+                <span id="submit-text">S'inscrire Gratuitement</span>
+                <span id="submit-spinner" class="spinner"></span>
+                <i data-lucide="arrow-right"></i>
+              </button>
+            </form>
+          </div>
+        </section>
+      </div>
+    </div>
+
+      </div>
+    </div>
+
+      </div>
+    </div>
+
+    <!-- Theoretical Course Section -->
+    <section id="cours" class="course-section container">
+      <div class="section-title-wrapper">
+        <h2 class="section-title">Cours Théorique – DevOps</h2>
+        <p class="section-description">Découvrez la théorie de l'ingénierie DevOps : de la culture collaborative au versioning de code, la conteneurisation et l'automatisation CI/CD.</p>
+      </div>
+
+      <div class="course-tabs-container">
+        
+        <!-- Sidebar Navigation for Chapters -->
+        <aside class="course-sidebar">
+          <ul class="course-nav-list">
+            <li class="course-nav-item active" data-course-target="intro">
+              <i data-lucide="info"></i>
+              <span>Introduction</span>
+            </li>
+            <li class="course-nav-item" data-course-target="ch1">
+              <span class="chapter-badge">1</span>
+              <span>1. Intro au DevOps</span>
+            </li>
+            <li class="course-nav-item" data-course-target="ch2">
+              <span class="chapter-badge">2</span>
+              <span>2. Git & GitHub</span>
+            </li>
+            <li class="course-nav-item" data-course-target="ch3">
+              <span class="chapter-badge">3</span>
+              <span>3. Docker & Conteneurs</span>
+            </li>
+            <li class="course-nav-item" data-course-target="ch4">
+              <span class="chapter-badge">4</span>
+              <span>4. CI/CD & Automation</span>
+            </li>
+            <li class="course-nav-item" data-course-target="ch5">
+              <span class="chapter-badge">5</span>
+              <span>5. Déploiement Cloud</span>
+            </li>
+            <li class="course-nav-item" data-course-target="conclusion">
+              <i data-lucide="check-circle"></i>
+              <span>Conclusion</span>
+            </li>
+          </ul>
+        </aside>
+
+        <!-- Course Content Panel -->
+        <div class="course-content-panel">
+          
+          <!-- Intro Content -->
+          <div class="course-tab-content active" id="course-intro">
+            <h3>Cours Complet – DevOps : De l'idée au Déploiement Professionnel</h3>
+            <p class="intro-lead">Ce cours théorique fournit les bases conceptuelles indispensables à la maîtrise de l'ingénierie DevOps moderne.</p>
+            
+            <div class="course-info-card">
+              <h4><i data-lucide="users"></i> Public Cible</h4>
+              <p>Étudiants en informatique, développeurs débutants et intermédiaires, administrateurs systèmes et ingénieurs logiciels souhaitant industrialiser leurs déploiements.</p>
+            </div>
+            
+            <div class="course-info-card" style="margin-top: 1rem;">
+              <h4><i data-lucide="clock"></i> Organisation</h4>
+              <p><strong>Durée recommandée :</strong> 12 à 18 heures de cours théorique associées aux ateliers pratiques.</p>
+            </div>
+            
+            <p style="margin-top: 1.5rem;">Utilisez la barre latérale pour naviguer entre les différents chapitres de ce cours complet.</p>
+          </div>
+
+          <!-- Chapter 1 Content -->
+          <div class="course-tab-content" id="course-ch1">
+            <h3>Chapitre 1 : Introduction au DevOps</h3>
+            
+            <div class="chapter-objectives">
+              <h5>Objectifs pédagogiques</h5>
+              <ul>
+                <li>Comprendre l'origine du DevOps et les limites de la structure traditionnelle.</li>
+                <li>Expliquer les différences entre le modèle en Silos et la culture DevOps.</li>
+                <li>Décrire le cycle de vie applicatif DevOps et les outils majeurs associés.</li>
+                <li>Comprendre les principes fondateurs CALMS.</li>
+              </ul>
+            </div>
+
+            <h4>1.1 Qu'est-ce que DevOps ?</h4>
+            <p>Le mot <strong>DevOps</strong> provient de la contraction de deux termes : <strong>Development</strong> (Développement) et <strong>Operations</strong> (Exploitation/Infrastructure). DevOps est une <strong>culture</strong>, un <strong>ensemble de pratiques</strong> et de méthodes qui permettent aux équipes de collaborer afin de livrer des logiciels de qualité, plus rapidement et avec une plus grande fiabilité.</p>
+            
+            <blockquote>
+              DevOps est une approche collaborative qui automatise le cycle de vie complet d'une application : développement, intégration, tests, déploiement, surveillance et amélioration continue.
+            </blockquote>
+
+            <h4>1.2 Pourquoi DevOps ?</h4>
+            <p>Traditionnellement, les équipes fonctionnaient en silos fermés :</p>
+            <ul>
+              <li><strong>Le Développeur</strong> écrit le code et réalise les tests locaux (sa priorité est la vitesse et l'innovation).</li>
+              <li><strong>L'Exploitant (Ops)</strong> configure les serveurs et gère la stabilité de production (sa priorité est la sécurité et le contrôle).</li>
+            </ul>
+            <p>Ce conflit naturel provoquait de nombreux blocages, des retards de livraison et des pannes de production. DevOps supprime cette frontière artificielle en alignant les objectifs des deux équipes autour de la livraison continue.</p>
+
+            <h4>1.3 Les Principes CALMS</h4>
+            <p>DevOps repose sur cinq piliers indispensables décrits par l'acronyme <strong>CALMS</strong> :</p>
+            <div class="calms-grid">
+              <div class="calms-card"><span class="calms-letter">C</span><strong>Culture</strong> collaboration et empathie.</div>
+              <div class="calms-card"><span class="calms-letter">A</span><strong>Automation</strong> automatisation des tâches.</div>
+              <div class="calms-card"><span class="calms-letter">L</span><strong>Lean</strong> cycles courts et suppression du gaspillage.</div>
+              <div class="calms-card"><span class="calms-letter">M</span><strong>Measurement</strong> indicateurs de performance (KPIs).</div>
+              <div class="calms-card"><span class="calms-letter">S</span><strong>Sharing</strong> partage des compétences et du feedback.</div>
+            </div>
+          </div>
+
+          <!-- Chapter 2 Content -->
+          <div class="course-tab-content" id="course-ch2">
+            <h3>Chapitre 2 : Git & GitHub</h3>
+            
+            <div class="chapter-objectives">
+              <h5>Objectifs pédagogiques</h5>
+              <ul>
+                <li>Comprendre le fonctionnement et les bénéfices du contrôle de version distribué.</li>
+                <li>Assimiler l'architecture de Git (Working Directory, Staging, Local & Remote).</li>
+                <li>Apprendre la gestion de branches et le workflow GitFlow.</li>
+              </ul>
+            </div>
+
+            <h4>2.1 Pourquoi Git ?</h4>
+            <p>Git évite le versioning chaotique consistant à multiplier des répertoires locaux (ex: <code>Projet_Final_v2_OK</code>). Il offre un historique infalsifiable, permet de revenir en arrière sur n'importe quelle modification et de faire travailler simultanément des dizaines de développeurs sur les mêmes fichiers.</p>
+
+            <h4>2.2 L'Architecture Git</h4>
+            <p>Git fonctionne avec quatre zones de cycle de vie des fichiers :</p>
+            <div class="git-flow-diagram">
+              <div class="git-zone">
+                <strong>Working Dir</strong>
+                <span>Modifications locales en cours</span>
+              </div>
+              <div class="git-action">git add</div>
+              <div class="git-zone">
+                <strong>Staging Area</strong>
+                <span>Fichiers indexés pour le commit</span>
+              </div>
+              <div class="git-action">git commit</div>
+              <div class="git-zone">
+                <strong>Local Repo</strong>
+                <span>Historique enregistré localement</span>
+              </div>
+              <div class="git-action">git push</div>
+              <div class="git-zone">
+                <strong>Remote Repo (GitHub)</strong>
+                <span>Partagé avec l'équipe</span>
+              </div>
+            </div>
+
+            <h4>2.3 Commandes fondamentales</h4>
+            <pre class="code-editor-style">$ git init                   # Initialiser un dépôt local
+$ git status                 # Voir les fichiers modifiés et indexés
+$ git add .                  # Indexer tous les fichiers
+$ git commit -m "Message"    # Valider les modifications locales
+$ git push origin main       # Envoyer le commit vers le dépôt distant</pre>
+
+            <h4>2.4 Le Modèle GitFlow</h4>
+            <p>Le workflow GitFlow structure le développement en branches dédiées :</p>
+            <ul>
+              <li><code>main</code> : La branche de production (stable).</li>
+              <li><code>develop</code> : Branche de développement actif.</li>
+              <li><code>feature/*</code> : Branches temporaires pour développer de nouvelles fonctionnalités.</li>
+              <li><code>release/*</code> : Préparation et stabilisation d'une nouvelle version de production.</li>
+              <li><code>hotfix/*</code> : Correction immédiate et urgente d'un bug en production.</li>
+            </ul>
+          </div>
+
+          <!-- Chapter 3 Content -->
+          <div class="course-tab-content" id="course-ch3">
+            <h3>Chapitre 3 : Docker et la Conteneurisation</h3>
+            
+            <div class="chapter-objectives">
+              <h5>Objectifs pédagogiques</h5>
+              <ul>
+                <li>Comprendre le principe et les bénéfices de la conteneurisation.</li>
+                <li>Distinguer la conteneurisation de la virtualisation classique.</li>
+                <li>Maîtriser les briques Docker (Image, Conteneur, Volumes, Réseaux).</li>
+                <li>Savoir concevoir un Dockerfile et utiliser Docker Compose pour orchestrer des services.</li>
+              </ul>
+            </div>
+
+            <h4>3.1 Pourquoi Docker ?</h4>
+            <p>Avant l'avènement de Docker, le déploiement d'applications souffrait du problème classique de l'incompatibilité des environnements (le syndrome du <em>« Chez moi ça fonctionne »</em>). Les différences de versions de systèmes d'exploitation, de librairies système (comme glibc), ou de dépendances logicielles (versions de Node, Python, Java) provoquaient fréquemment des pannes lors du déploiement en production.</p>
+            <p>Docker résout ce problème en s'appuyant sur des fonctionnalités du noyau Linux (les <strong>Namespaces</strong> pour l'isolation des processus, réseaux et disques, et les **Control Groups / cgroups** pour la limitation des ressources physiques comme le CPU et la RAM). Il permet d'emballer une application et tout son environnement d'exécution dans une unité logique standardisée et portable.</p>
+
+            <h4>3.2 Machine virtuelle vs Conteneur</h4>
+            <p>Contrairement aux machines virtuelles traditionnelles qui nécessitent un système d'exploitation invité (Guest OS) complet et un hyperviseur, les conteneurs partagent le noyau du système d'exploitation de la machine hôte. Cela se traduit par une efficacité de ressources incomparable.</p>
+            
+            <div class="table-container">
+              <table class="course-table">
+                <thead>
+                  <tr>
+                    <th>Caractéristique</th>
+                    <th>Machine Virtuelle (VM)</th>
+                    <th>Conteneur (Docker)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Architecture</strong></td>
+                    <td>Système d'exploitation complet (Guest OS) sur hyperviseur</td>
+                    <td>Partage le noyau de l'hôte, processus isolé</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Poids</strong></td>
+                    <td>Lourd (plusieurs Go)</td>
+                    <td>Très léger (quelques Mo à Go)</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Démarrage</strong></td>
+                    <td>Lent (minutes, boot complet du système)</td>
+                    <td>Quasi-instantané (secondes, simple lancement de processus)</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Ressources</strong></td>
+                    <td>Mémoire et CPU réservés à l'avance (gaspillage)</td>
+                    <td>Allocation dynamique selon les besoins réels</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Densité</strong></td>
+                    <td>Faible (quelques VMs par serveur physique)</td>
+                    <td>Très élevée (des dizaines/centaines de conteneurs)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h4>3.3 Les composants Docker</h4>
+            <ul>
+              <li><strong>Dockerfile :</strong> Fichier texte de configuration contenant les instructions successives pour assembler l'image applicative. Directives majeures :
+                <ul>
+                  <li><code>FROM</code> : Définit l'image de base (ex: <code>python:3.12-slim</code>).</li>
+                  <li><code>WORKDIR</code> : Définit le répertoire de travail dans le conteneur.</li>
+                  <li><code>COPY</code> : Copie des fichiers locaux de l'hôte vers le conteneur.</li>
+                  <li><code>RUN</code> : Exécute des commandes lors de la construction (build) de l'image (ex: installation de paquets).</li>
+                  <li><code>EXPOSE</code> : Documente le port d'écoute réseau.</li>
+                  <li><code>CMD</code> : Commande par défaut exécutée au démarrage du conteneur.</li>
+                </ul>
+              </li>
+              <li><strong>Image :</strong> Modèle immuable en lecture seule constitué d'une superposition de couches (layers). Chaque instruction du Dockerfile crée une nouvelle couche, facilitant le cache de build.</li>
+              <li><strong>Conteneur :</strong> Instance active et modifiable d'une image. Docker y ajoute une fine couche accessible en écriture (writable layer) au-dessus des couches de l'image.</li>
+              <li><strong>Registry :</strong> Dépôt centralisé d'images (Docker Hub, GitHub Container Registry, GitLab Registry) servant à distribuer les images.</li>
+            </ul>
+
+            <h4>3.4 Cycle de vie de l'application conteneurisée</h4>
+            <p>Le workflow Docker repose sur le principe de <strong>Build, Ship, and Run</strong> (Construire, Distribuer, Exécuter) :</p>
+            <div class="git-flow-diagram">
+              <div class="git-zone">
+                <strong>1. Build</strong>
+                <span>docker build</span>
+              </div>
+              <div class="git-action">Image</div>
+              <div class="git-zone">
+                <strong>2. Ship</strong>
+                <span>docker push</span>
+              </div>
+              <div class="git-action">Registry</div>
+              <div class="git-zone">
+                <strong>3. Run</strong>
+                <span>docker run</span>
+              </div>
+              <div class="git-action">Conteneur</div>
+            </div>
+
+            <h4>3.5 Commandes essentielles détaillées</h4>
+            <pre class="code-editor-style"># 1. Construire l'image avec un tag depuis le dossier courant (.)
+$ docker build -t mon-application:v1.0.0 .
+
+# 2. Lister les images stockées localement
+$ docker images
+
+# 3. Lancer un conteneur en arrière-plan (-d) avec mappage de port (-p local:conteneur)
+$ docker run -d -p 8080:5000 --name instance-web mon-application:v1.0.0
+
+# 4. Lister les conteneurs actifs (ajouter -a pour inclure les conteneurs arrêtés)
+$ docker ps
+
+# 5. Consulter les logs de l'application en direct (-f pour suivre le flux)
+$ docker logs -f instance-web
+
+# 6. Exécuter une commande interactive (TTY) à l'intérieur du conteneur
+$ docker exec -it instance-web bash
+
+# 7. Arrêter et supprimer le conteneur
+$ docker stop instance-web
+$ docker rm instance-web</pre>
+
+            <h4>3.6 Docker Compose</h4>
+            <p><strong>Docker Compose</strong> simplifie la gestion des applications multi-conteneurs. Au lieu de taper de longues lignes de commande Docker pour chaque service, on décrit toute la pile technique dans un fichier YAML unique (<code>docker-compose.yml</code>) :</p>
+            <pre class="code-editor-style">version: "3.9"
+
+services:
+  web:
+    build: .
+    container_name: web-service
+    ports:
+      - "5000:5000"
+    depends_on:
+      - database
+
+  database:
+    image: postgres:16
+    container_name: db-service
+    environment:
+      POSTGRES_DB: devops_db
+      POSTGRES_PASSWORD: root_pass
+    volumes:
+      - db_data:/var/lib/postgresql/data
+
+volumes:
+  db_data:</pre>
+            <p>Toute l'infrastructure (le serveur web Flask et sa base de données PostgreSQL) démarre d'une seule commande : <code>docker compose up -d</code>.</p>
+
+            <h4>3.7 Volumes et Réseaux</h4>
+            <ul>
+              <li><strong>Les Volumes :</strong> Par défaut, les conteneurs sont éphémères (toutes les données créées à l'intérieur sont perdues à sa suppression). Les volumes permettent de monter un répertoire de la machine hôte dans le conteneur pour persister les fichiers sensibles (comme les données de base de données ou les uploads utilisateurs).</li>
+              <li><strong>Les Réseaux (Networks) :</strong> Permettent aux conteneurs de communiquer entre eux de manière isolée et sécurisée. Docker Compose crée automatiquement un réseau privé par défaut pour tous les services définis, leur permettant de s'adresser par leur nom de service (ex: l'application web peut se connecter à la base de données en utilisant l'hôte <code>database</code> au lieu d'une adresse IP).</li>
+            </ul>
+          </div>
+
+          <!-- Chapter 4 Content -->
+          <div class="course-tab-content" id="course-ch4">
+            <h3>Chapitre 4 : CI/CD avec GitHub Actions</h3>
+            
+            <div class="chapter-objectives">
+              <h5>Objectifs pédagogiques</h5>
+              <ul>
+                <li>Comprendre l'intégration continue (CI) et le déploiement continu (CD), puis créer un pipeline automatisé.</li>
+                <li>Distinguer la Livraison Continue (Continuous Delivery) du Déploiement Continu (Continuous Deployment).</li>
+                <li>Connaître les concepts clés de GitHub Actions (Workflows, Events, Jobs, Steps, Runners, Actions).</li>
+                <li>Savoir concevoir un workflow YAML complet pour compiler, tester et packager une application dans Docker.</li>
+              </ul>
+            </div>
+
+            <h4>4.1 Qu'est-ce que la CI (Intégration Continue) ?</h4>
+            <p>L'<strong>Intégration Continue (Continuous Integration)</strong> est une pratique de développement logiciel dans laquelle les membres d'une équipe fusionnent fréquemment leurs modifications de code dans la branche principale (généralement plusieurs fois par jour). </p>
+            <p>Chaque fusion ou <code>git push</code> déclenche automatiquement un pipeline de validation qui effectue :</p>
+            <ul>
+              <li>La récupération du code source (checkout).</li>
+              <li>L'installation de l'environnement et des dépendances.</li>
+              <li>La vérification de la syntaxe et de la qualité du code (Linting).</li>
+              <li>La compilation/build de l'application.</li>
+              <li>La vérification fonctionnelle via l'exécution des tests automatisés (tests unitaires et d'intégration).</li>
+            </ul>
+            <p>L'objectif principal est de détecter les régressions et les conflits d'intégration le plus tôt possible dans le cycle de développement, évitant les mauvaises surprises avant la mise en production.</p>
+
+            <h4>4.2 Qu'est-ce que le CD (Livraison et Déploiement Continus) ?</h4>
+            <p>Le **CD** représente l'extension logique de l'Intégration Continue. Il existe deux approches distinctes :</p>
+            <ul>
+              <li><strong>Continuous Delivery (Livraison Continue) :</strong> Le pipeline automatise toutes les étapes jusqu'à la production. Une image ou un package stable est généré et prêt à être déployé à tout moment, mais le clic final pour envoyer le code en production nécessite une validation humaine (ex: un chef de projet ou un administrateur).</li>
+              <li><strong>Continuous Deployment (Déploiement Continu) :</strong> Le pipeline est entièrement automatisé de bout en bout. Dès qu'un commit franchit toutes les validations de la CI, il est automatiquement déployé en production, sans aucune intervention humaine. C'est l'approche la plus avancée.</li>
+            </ul>
+
+            <h4>4.3 Qu'est-ce que GitHub Actions ?</h4>
+            <p><strong>GitHub Actions</strong> est la plateforme CI/CD intégrée nativement à GitHub. Elle permet d'automatiser, de personnaliser et d'exécuter des workflows de développement logiciel directement dans votre dépôt. Les pipelines de GitHub Actions sont décrits dans des fichiers au format **YAML** placés impérativement dans le répertoire suivant du projet : <code>.github/workflows/</code>.</p>
+
+            <h4>4.4 Les éléments fondamentaux d'un workflow</h4>
+            <ul>
+              <li><strong>Event (Événement) :</strong> Le déclencheur qui démarre le workflow (ex: un <code>push</code> sur la branche <code>main</code>, une <code>pull_request</code>, ou une planification chronologique <code>cron</code>).</li>
+              <li><strong>Job (Travail) :</strong> Un ensemble d'étapes (Steps) exécutées séquentiellement sur un même exécuteur (Runner). Par défaut, si vous avez plusieurs Jobs, ils s'exécutent en parallèle, mais vous pouvez les lier par des dépendances (ex: le job de déploiement dépend du succès du job de test).</li>
+              <li><strong>Step (Étape) :</strong> Une tâche individuelle au sein d'un Job. Il peut s'agir d'une simple commande bash (ex: <code>npm run test</code>) ou de l'appel à une Action réutilisable.</li>
+              <li><strong>Action :</strong> Un module de tâche pré-packagé (disponible sur la Marketplace GitHub) pour simplifier les workflows (ex: <code>actions/checkout</code> pour cloner le dépôt, ou <code>docker/setup-buildx-action</code>).</li>
+              <li><strong>Runner (Exécuteur) :</strong> La machine virtuelle ou le conteneur sur lequel le Job est exécuté (fourni par GitHub comme <code>ubuntu-latest</code>, <code>windows-latest</code>, ou auto-hébergé sur vos propres serveurs).</li>
+            </ul>
+
+            <h4>4.5 Exemple complet d'un pipeline CI/CD YAML</h4>
+            <p>Voici un fichier de workflow type (<code>.github/workflows/ci-cd.yml</code>) configuré pour tester une application Python Flask, compiler son image Docker et la publier sur Docker Hub :</p>
+            <pre class="code-editor-style">name: Pipeline CI/CD DevOps
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  run-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Récupérer le code source
+        uses: actions/checkout@v4
+
+      - name: Configurer Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Installer les dépendances
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Exécuter les tests unitaires
+        run: |
+          python -m unittest discover tests/
+
+  build-and-push-docker:
+    runs-on: ubuntu-latest
+    needs: run-tests # Ce job ne démarre que si le job 'run-tests' réussit !
+    steps:
+      - name: Récupérer le code source
+        uses: actions/checkout@v4
+
+      - name: Se connecter à Docker Hub
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+
+      - name: Configurer Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Build et Push de l'image Docker
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          push: true
+          tags: ${{ secrets.DOCKER_USERNAME }}/devops-app:latest</pre>
+            <h4>4.6 Les avantages de la CI/CD</h4>
+            <ul>
+              <li><strong>Détection précoce des erreurs :</strong> Les bugs sont identifiés et corrigés immédiatement après l'écriture du code, réduisant considérablement le coût des corrections.</li>
+              <li><strong>Livraison accélérée :</strong> Le déploiement ne prend plus des heures de manipulation manuelle stressante ; il se fait en quelques minutes de manière automatique.</li>
+              <li><strong>Qualité et homogénéité :</strong> Les tests sont joués systématiquement sur des machines virtuelles neutres et propres, garantissant qu'aucune bibliothèque locale du développeur ne fausse les résultats.</li>
+              <li><strong>Historique et Audit :</strong> Chaque déploiement en production est documenté par un commit Git et un rapport d'exécution du workflow CI/CD, offrant une traçabilité totale.</li>
+            </ul>
+          </div>
+
+          <!-- Chapter 5 Content -->
+          <div class="course-tab-content" id="course-ch5">
+            <h3>Chapitre 5 : Déploiement Professionnel et Administration</h3>
+            
+            <div class="chapter-objectives">
+              <h5>Objectifs pédagogiques</h5>
+              <ul>
+                <li>Savoir préparer et sécuriser un serveur Ubuntu VPS (SSH, Pare-feu UFW).</li>
+                <li>Installer proprement l'environnement d'exécution Docker.</li>
+                <li>Configurer Nginx en tant que Reverse Proxy avec les entêtes sécurisées adaptées.</li>
+                <li>Automatiser l'installation et le renouvellement d'un certificat SSL avec Let's Encrypt / Certbot.</li>
+                <li>Appliquer les bonnes pratiques d'exploitation professionnelles (Secrets, Backups, Rollbacks, Monitoring).</li>
+              </ul>
+            </div>
+
+            <h4>5.1 Préparation et Sécurisation du VPS</h4>
+            <p>Un VPS (Virtual Private Server) est une instance virtuelle louée chez un hébergeur Cloud (ex: OVH, DigitalOcean, AWS, GCP). Par défaut, le serveur est livré avec le compte administrateur <code>root</code> accessible. Pour des raisons évidentes de sécurité, il convient de durcir l'accès immédiatement :</p>
+            <ol>
+              <li><strong>Création d'un utilisateur système non-root doté des droits d'administration :</strong>
+                <pre class="code-editor-style">$ adduser devopsuser
+$ usermod -aG sudo devopsuser</pre>
+              </li>
+              <li><strong>Sécurisation de SSH :</strong> Désactiver l'authentification par mot de passe au profit d'une clé SSH publique/privée, et interdire la connexion directe en root dans le fichier <code>/etc/ssh/sshd_config</code> :
+                <pre class="code-editor-style">PermitRootLogin no
+PasswordAuthentication no</pre>
+                Puis redémarrer le service SSH : <code>sudo systemctl restart ssh</code>.
+              </li>
+              <li><strong>Configuration du pare-feu (UFW) :</strong> Bloquer par défaut tous les ports entrants, sauf le port SSH, HTTP et HTTPS :
+                <pre class="code-editor-style">$ sudo ufw default deny incoming
+$ sudo ufw default allow outgoing
+$ sudo ufw allow 22/tcp
+$ sudo ufw allow 80/tcp
+$ sudo ufw allow 443/tcp
+$ sudo ufw enable</pre>
+              </li>
+            </ol>
+
+            <h4>5.2 Installation de Docker Engine</h4>
+            <p>Pour installer proprement Docker sur Ubuntu, on évite les paquets obsolètes fournis par défaut et on configure les dépôts officiels Docker :</p>
+            <pre class="code-editor-style"># Mettre à jour l'index des paquets et installer les prérequis
+$ sudo apt update && sudo apt install -y ca-certificates curl gnupg
+
+# Ajouter la clé GPG officielle de Docker
+$ sudo install -m 0755 -d /etc/apt/keyrings
+$ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+$ sudo chmod a+r /etc/apt/keyrings/docker.gpg
+
+# Configurer le dépôt apt officiel
+$ echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+
+# Installer Docker Engine, le CLI et Docker Compose
+$ sudo apt update && sudo apt install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+
+# Autoriser notre utilisateur devopsuser à lancer Docker sans sudo
+$ sudo usermod -aG docker devopsuser</pre>
+
+            <h4>5.3 Déploiement avec Docker Compose</h4>
+            <p>Une fois le fichier <code>docker-compose.yml</code> transféré sur le serveur (via Git ou une action SSH de notre CI/CD), le déploiement se fait d'une seule commande. Docker se charge de télécharger les images requises, de créer le réseau privé et de démarrer les conteneurs dans le bon ordre de dépendance :</p>
+            <pre class="code-editor-style"># Lancer la pile applicative en arrière-plan (detached mode)
+$ docker compose up -d
+
+# Vérifier le statut des conteneurs
+$ docker compose ps
+
+# Consulter les journaux en direct de toute la stack
+$ docker compose logs -f</pre>
+
+            <h4>5.4 Nginx comme Reverse Proxy</h4>
+            <p>Nginx est installé sur le système hôte (ou en tant que conteneur Docker séparé) et sert d'aiguillage réseau. Il écoute sur les ports standards du web (80 et 443) et redirige le trafic vers le bon conteneur en y injectant les entêtes HTTP d'origine. Voici un bloc de configuration type de Nginx (<code>/etc/nginx/sites-available/default</code>) :</p>
+            <pre class="code-editor-style">server {
+    listen 80;
+    server_name mon-domaine.com;
+
+    location / {
+        proxy_pass http://127.0.0.1:5000; # Redirige vers le conteneur Flask
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+}</pre>
+            <p>Activer la configuration et redémarrer Nginx : <code>sudo systemctl restart nginx</code>.</p>
+
+            <h4>5.5 Sécurisation HTTPS avec Let's Encrypt & Certbot</h4>
+            <p>Pour passer notre site en HTTPS (port 443), on utilise l'autorité de certification gratuite **Let's Encrypt**. L'utilitaire **Certbot** analyse la configuration Nginx et génère automatiquement le certificat d'autorité :</p>
+            <pre class="code-editor-style"># Installer Certbot et son plugin Nginx
+$ sudo apt install -y certbot python3-certbot-nginx
+
+# Lancer la génération et la configuration automatique SSL
+$ sudo certbot --nginx -d mon-domaine.com</pre>
+            <p>Certbot modifie la configuration Nginx pour y insérer les chemins vers la clé privée et le certificat SSL générés, et ajoute une redirection automatique HTTP vers HTTPS. Les certificats durent 90 jours ; Certbot installe un démon système (Systemd Timer) qui vérifie et renouvelle les certificats automatiquement deux fois par jour.</p>
+
+            <h4>5.6 Surveillance, Diagnostic et Maintenance</h4>
+            <p>Une fois l'application déployée, la phase de "Run" (Exploitation) commence. Le DevOps doit monitorer l'état du système :</p>
+            <ul>
+              <li><code>docker stats</code> : Visualisation en temps réel de la consommation CPU, RAM et réseau de chaque conteneur.</li>
+              <li><code>docker logs -n 100 [container_id]</code> : Affiche les 100 dernières lignes de log pour diagnostiquer une erreur applicative.</li>
+              <li><code>journalctl -u docker.service -n 50</code> : Consulte les logs du démon système Docker.</li>
+              <li><strong>Scripting de Sauvegardes :</strong> Automatisation d'un dump de base de données PostgreSQL compressé quotidien, puis son transfert sécurisé vers un espace de stockage objet froid (S3) :
+                <pre class="code-editor-style">docker exec -t db-service pg_dump -U postgres devops_db | gzip > backup_$(date +%F).sql.gz</pre>
+              </li>
+            </ul>
+
+            <h4>5.7 Bonnes pratiques de déploiement professionnel</h4>
+            <ul>
+              <li><strong>Séparation des Environnements :</strong> Utilisez des environnements distincts (Dev, Staging pour les tests, Prod pour les utilisateurs) pour éviter les perturbations.</li>
+              <li><strong>Secrets Manager :</strong> Ne stockez jamais d'identifiants ou secrets en clair. Chargez-les via des variables d'environnement injectées par GitHub Secrets en production.</li>
+              <li><strong>Déploiement Blue-Green / Canary :</strong> Stratégies de livraison avancées limitant le downtime (interruption de service) lors des mises à jour.</li>
+              <li><strong>Rollback automatique :</strong> Si les tests de santé (Healthchecks) échouent suite à une mise à jour automatique, le pipeline CI/CD doit immédiatement redéployer l'ancienne version stable d'image Docker.</li>
+            </ul>
+          </div>
+
+          <!-- Course Conclusion Content -->
+          <div class="course-tab-content" id="course-conclusion">
+            <h3>Conclusion du Cours</h3>
+            <p class="intro-lead">Le DevOps : une culture et un standard incontournable.</p>
+            
+            <p>Le DevOps n'est pas seulement une boîte à outils technologiques, c'est avant tout un changement culturel visant à briser le fossé historique entre les équipes de développement et d'infrastructure.</p>
+            <p>En combinant <strong>Git</strong> pour le contrôle de versions, <strong>GitHub</strong> pour la collaboration, <strong>Docker</strong> pour la portabilité des environnements, <strong>GitHub Actions</strong> pour l'automatisation systématique, et un <strong>VPS Ubuntu sécurisé par Nginx et HTTPS</strong> pour l'hébergement, vous disposez d'un socle d'ingénierie robuste, capable de livrer de la valeur en continu, rapidement, et en toute sécurité. La maîtrise de cette chaîne DevOps est la clé pour concevoir des applications modernes et fiables de l'idée jusqu'à la production.</p>
+          </div>
+      </div>
+    </section>
+
+    <!-- Practical Workshop Section -->
+    <section id="atelier" class="workshop-section container">
+      <div class="section-title-wrapper">
+        <h2 class="section-title">Atelier Pratique – DevOps Starter</h2>
+        <p class="section-description">Apprenez à développer, versionner, conteneuriser et déployer une application web complète sur un VPS en HTTPS.</p>
+      </div>
+
+      <!-- Interactive Architecture Flowchart -->
+      <div class="architecture-flowchart">
+        <h3 class="flowchart-title"><i data-lucide="git-branch" class="title-icon"></i> Architecture du Pipeline de Déploiement</h3>
+        <div class="flowchart-nodes">
+          <div class="flowchart-node-card active" data-step-nav="intro">
+            <div class="flowchart-icon"><i data-lucide="laptop"></i></div>
+            <span class="flowchart-label">Développeur</span>
+          </div>
+          <div class="flowchart-arrow"><i data-lucide="arrow-right"></i></div>
+          <div class="flowchart-node-card" data-step-nav="3">
+            <div class="flowchart-icon"><i data-lucide="git-commit"></i></div>
+            <span class="flowchart-label">Git Commit</span>
+          </div>
+          <div class="flowchart-arrow"><i data-lucide="arrow-right"></i></div>
+          <div class="flowchart-node-card" data-step-nav="1">
+            <div class="flowchart-icon"><i data-lucide="github"></i></div>
+            <span class="flowchart-label">GitHub Repo</span>
+          </div>
+          <div class="flowchart-arrow"><i data-lucide="arrow-right"></i></div>
+          <div class="flowchart-node-card" data-step-nav="6">
+            <div class="flowchart-icon"><i data-lucide="play-circle"></i></div>
+            <span class="flowchart-label">CI Actions</span>
+          </div>
+          <div class="flowchart-arrow"><i data-lucide="arrow-right"></i></div>
+          <div class="flowchart-node-card" data-step-nav="7">
+            <div class="flowchart-icon"><i data-lucide="server"></i></div>
+            <span class="flowchart-label">Ubuntu VPS</span>
+          </div>
+          <div class="flowchart-arrow"><i data-lucide="arrow-right"></i></div>
+          <div class="flowchart-node-card" data-step-nav="5">
+            <div class="flowchart-icon"><i data-lucide="box"></i></div>
+            <span class="flowchart-label">Docker Compose</span>
+          </div>
+          <div class="flowchart-arrow"><i data-lucide="arrow-right"></i></div>
+          <div class="flowchart-node-card" data-step-nav="8">
+            <div class="flowchart-icon"><i data-lucide="globe"></i></div>
+            <span class="flowchart-label">Nginx & SSL</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Workshop Tabs Wrapper -->
+      <div class="workshop-tabs-container">
+        
+        <!-- Sidebar Navigation -->
+        <aside class="workshop-sidebar">
+          <ul class="workshop-nav-list">
+            <li class="workshop-nav-item active" data-step-target="intro">
+              <i data-lucide="info"></i>
+              <span>Introduction</span>
+            </li>
+            <li class="workshop-nav-item" data-step-target="1">
+              <span class="step-badge">1</span>
+              <span>1. Dépôt GitHub</span>
+            </li>
+            <li class="workshop-nav-item" data-step-target="2">
+              <span class="step-badge">2</span>
+              <span>2. Application Flask</span>
+            </li>
+            <li class="workshop-nav-item" data-step-target="3">
+              <span class="step-badge">3</span>
+              <span>3. Versionner (Git)</span>
+            </li>
+            <li class="workshop-nav-item" data-step-target="4">
+              <span class="step-badge">4</span>
+              <span>4. Dockeriser (Docker)</span>
+            </li>
+            <li class="workshop-nav-item" data-step-target="5">
+              <span class="step-badge">5</span>
+              <span>5. Docker Compose</span>
+            </li>
+            <li class="workshop-nav-item" data-step-target="6">
+              <span class="step-badge">6</span>
+              <span>6. GitHub Actions</span>
+            </li>
+            <li class="workshop-nav-item" data-step-target="7">
+              <span class="step-badge">7</span>
+              <span>7. Déploiement VPS</span>
+            </li>
+            <li class="workshop-nav-item" data-step-target="8">
+              <span class="step-badge">8</span>
+              <span>8. Proxy Nginx</span>
+            </li>
+            <li class="workshop-nav-item" data-step-target="9">
+              <span class="step-badge">9</span>
+              <span>9. SSL Let's Encrypt</span>
+            </li>
+            <li class="workshop-nav-item" data-step-target="10">
+              <span class="step-badge">10</span>
+              <span>10. Test de Production</span>
+            </li>
+            <li class="workshop-nav-item" data-step-target="conclusion">
+              <i data-lucide="check-square"></i>
+              <span>Bonnes Pratiques</span>
+            </li>
+          </ul>
+        </aside>
+
+        <!-- Documentation Content Panel -->
+        <div class="workshop-content-panel">
+          
+          <!-- Intro Content -->
+          <div class="workshop-tab-content active" id="step-intro">
+            <h3>Atelier Pratique : Déploiement Complet DevOps</h3>
+            <p class="intro-lead">Cet atelier a pour objectif de mettre en place une chaîne DevOps complète permettant de développer, versionner, conteneuriser, automatiser et déployer une application web sur un VPS Ubuntu.</p>
+            
+            <div class="workshop-highlight-box info">
+              <h4><i data-lucide="graduation-cap"></i> Compétences acquises à la fin de l'atelier</h4>
+              <ul>
+                <li>Créer et configurer un dépôt distant sécurisé sur GitHub.</li>
+                <li>Développer une application Web avec Python Flask.</li>
+                <li>Versionner proprement son code avec Git.</li>
+                <li>Conteneuriser l'application avec Docker et orchestrer avec Docker Compose.</li>
+                <li>Créer un workflow CI/CD d'automatisation avec GitHub Actions.</li>
+                <li>Configurer un VPS Ubuntu, installer Docker, et paramétrer Nginx en Reverse Proxy.</li>
+                <li>Sécuriser le site avec un certificat SSL Let's Encrypt (HTTPS).</li>
+              </ul>
+            </div>
+            
+            <p>Utilisez le menu latéral gauche pour parcourir les différentes étapes pas à pas. Vous y trouverez toutes les commandes, les fichiers de configuration et les explications théoriques.</p>
+          </div>
+
+          <!-- Step 1 Content -->
+          <div class="workshop-tab-content" id="step-1">
+            <h3>Étape 1 — Créer un dépôt GitHub</h3>
+            <p>Le stockage et le versioning centralisé de votre code est la première étape de toute démarche DevOps.</p>
+            
+            <h4>1. Créer le dépôt sur GitHub</h4>
+            <ul>
+              <li>Connectez-vous à votre compte GitHub.</li>
+              <li>Créez un nouveau dépôt public nommé <code>devops-starter</code>.</li>
+              <li>Vous pouvez cocher l'option <em>Initialize this repository with a README</em> ou le laisser vide.</li>
+            </ul>
+
+            <h4>2. Cloner le dépôt localement</h4>
+            <p>Ouvrez votre terminal et exécutez les commandes suivantes pour rapatrier le dépôt sur votre machine locale :</p>
+            
+            <div class="code-block-wrapper">
+              <div class="code-block-header">
+                <span>Bash / Terminal</span>
+                <button type="button" class="btn-copy-code" data-code-target="code-clone"><i data-lucide="copy"></i> Copier</button>
+              </div>
+              <pre id="code-clone">git clone https://github.com/votre-user/devops-starter.git
+cd devops-starter</pre>
+            </div>
+
+            <h4>3. Vérifier le statut de Git</h4>
+            <div class="code-block-wrapper">
+              <div class="code-block-header">
+                <span>Bash / Terminal</span>
+                <button type="button" class="btn-copy-code" data-code-target="code-git-status"><i data-lucide="copy"></i> Copier</button>
+              </div>
+              <pre id="code-git-status">git status</pre>
+            </div>
+            <p><strong>Résultat attendu :</strong></p>
+            <pre class="terminal-output">On branch main
+nothing to commit, working tree clean</pre>
+          </div>
+
+          <!-- Step 2 Content -->
+          <div class="workshop-tab-content" id="step-2">
+            <h3>Étape 2 — Créer une application</h3>
+            <p>Pour cet atelier, nous développons une application web ultra-légère à l'aide du framework Python <strong>Flask</strong>.</p>
+            
+            <h4>1. Créer l'environnement virtuel et installer Flask</h4>
+            <p>Dans le dossier <code>devops-starter</code>, lancez ces commandes :</p>
+            
+            <div class="code-block-wrapper">
+              <div class="code-block-header">
+                <span>Bash / Terminal</span>
+                <button type="button" class="btn-copy-code" data-code-target="code-venv"><i data-lucide="copy"></i> Copier</button>
+              </div>
+              <pre id="code-venv">python -m venv venv
+# Activation (Linux/macOS) :
+source venv/bin/activate
+# Activation (Windows PowerShell) :
+.\venv\Scripts\Activate.ps1
+
+pip install flask</pre>
+            </div>
+
+            <h4>2. Créer l'application Flask (app.py)</h4>
+            <p>Créez un fichier nommé <code>app.py</code> et collez-y le code suivant :</p>
+
+            <div class="code-block-wrapper">
+              <div class="code-block-header">
+                <span>app.py (Python)</span>
+                <button type="button" class="btn-copy-code" data-code-target="code-app-py"><i data-lucide="copy"></i> Copier</button>
+              </div>
+              <pre id="code-app-py">from flask import Flask
+
+app = Flask(__name__)
+
+@app.route("/")
+def home():
+    return "<h1>Bienvenue au cours DevOps 🚀</h1>"
+
+@app.route("/health")
+def health():
+    return {"status": "OK"}
+
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=5000)</pre>
+            </div>
+
+            <h4>3. Créer le fichier des dépendances (requirements.txt)</h4>
+            <p>Déclarez la dépendance Flask dans <code>requirements.txt</code> :</p>
+            
+            <div class="code-block-wrapper">
+              <div class="code-block-header">
+                <span>requirements.txt</span>
+                <button type="button" class="btn-copy-code" data-code-target="code-reqs"><i data-lucide="copy"></i> Copier</button>
+              </div>
+              <pre id="code-reqs">Flask==3.0.3</pre>
+            </div>
+
+            <h4>4. Tester en local</h4>
+            <p>Lancez l'application en local :</p>
+            <div class="code-block-wrapper">
+              <div class="code-block-header">
+                <span>Bash / Terminal</span>
+                <button type="button" class="btn-copy-code" data-code-target="code-run-local"><i data-lucide="copy"></i> Copier</button>
+              </div>
+              <pre id="code-run-local">python app.py</pre>
+            </div>
+            <p>Ouvrez votre navigateur sur <a href="http://localhost:5000" target="_blank">http://localhost:5000</a> pour voir la page d'accueil, et testez <a href="http://localhost:5000/health" target="_blank">http://localhost:5000/health</a> pour valider le statut de santé.</p>
+          </div>
+
+          <!-- Step 3 Content -->
+          <div class="workshop-tab-content" id="step-3">
+            <h3>Étape 3 — Versionner avec Git</h3>
+            <p>Nous allons maintenant enregistrer notre travail local dans l'historique Git et le pousser sur notre dépôt GitHub.</p>
+
+            <h4>1. Ajouter un fichier .gitignore</h4>
+            <p>Il est crucial d'exclure les fichiers inutiles et sensibles. Créez un fichier <code>.gitignore</code> :</p>
+            
+            <div class="code-block-wrapper">
+              <div class="code-block-header">
+                <span>.gitignore</span>
+                <button type="button" class="btn-copy-code" data-code-target="code-gitignore"><i data-lucide="copy"></i> Copier</button>
+              </div>
+              <pre id="code-gitignore">venv/
+*.pyc
+__pycache__/
+.env
+.pytest_cache/
+.github-private-keys/</pre>
+            </div>
+
+            <h4>2. Commit & Push</h4>
+            <p>Enregistrez vos modifications et envoyez le code vers la branche principale <code>main</code> :</p>
+
+            <div class="code-block-wrapper">
+              <div class="code-block-header">
+                <span>Bash / Terminal</span>
+                <button type="button" class="btn-copy-code" data-code-target="code-push"><i data-lucide="copy"></i> Copier</button>
+              </div>
+              <pre id="code-push">git init
+git add .
+git commit -m "Initial commit"
+git branch -M main
+git remote add origin https://github.com/votre-user/devops-starter.git
+git push -u origin main</pre>
+            </div>
+            <p>Rendez-vous sur votre dépôt GitHub pour vérifier que tous les fichiers (sauf le dossier <code>venv/</code>) sont bien présents.</p>
+          </div>
+
+          <!-- Step 4 Content -->
+          <div class="workshop-tab-content" id="step-4">
+            <h3>Étape 4 — Dockeriser l'application</h3>
+            <p>La conteneurisation garantit que l'application s'exécute de la même manière en local, en test et en production.</p>
+
+            <h4>1. Écrire le Dockerfile</h4>
+            <p>Créez un fichier nommé <code>Dockerfile</code> (sans extension) à la racine du projet :</p>
+
+            <div class="code-block-wrapper">
+              <div class="code-block-header">
+                <span>Dockerfile</span>
+                <button type="button" class="btn-copy-code" data-code-target="code-dockerfile"><i data-lucide="copy"></i> Copier</button>
+              </div>
+              <pre id="code-dockerfile">FROM python:3.12-slim
+
+WORKDIR /app
+
+COPY requirements.txt .
+
+RUN pip install --no-cache-dir -r requirements.txt
+
+COPY . .
+
+EXPOSE 5000
+
+CMD ["python", "app.py"]</pre>
+            </div>
+
+            <h4>2. Construire l'image Docker</h4>
+            <p>Générez l'image Docker locale en la taguant <code>devops-starter</code> :</p>
+            <div class="code-block-wrapper">
+              <div class="code-block-header">
+                <span>Bash / Terminal</span>
+                <button type="button" class="btn-copy-code" data-code-target="code-build-image"><i data-lucide="copy"></i> Copier</button>
+              </div>
+              <pre id="code-build-image">docker build -t devops-starter .</pre>
+            </div>
+
+            <h4>3. Lancer le conteneur local</h4>
+            <p>Exécutez le conteneur en mode détaché (arrière-plan) en mappant le port 5000 :</p>
+            <div class="code-block-wrapper">
+              <div class="code-block-header">
+                <span>Bash / Terminal</span>
+                <button type="button" class="btn-copy-code" data-code-target="code-run-container"><i data-lucide="copy"></i> Copier</button>
+              </div>
+              <pre id="code-run-container">docker run -d -p 5000:5000 devops-starter</pre>
+            </div>
+            <p>Vérifiez à nouveau en ouvrant <code>http://localhost:5000</code>. L'application tourne maintenant à l'intérieur de Docker !</p>
+          </div>
+
+          <!-- Step 5 Content -->
+          <div class="workshop-tab-content" id="step-5">
+            <h3>Étape 5 — Docker Compose</h3>
+            <p><strong>Docker Compose</strong> permet de définir et de lancer des applications multi-conteneurs facilement grâce à un fichier YAML.</p>
+
+            <h4>1. Créer le fichier docker-compose.yml</h4>
+            <p>Créez le fichier <code>docker-compose.yml</code> :</p>
+
+            <div class="code-block-wrapper">
+              <div class="code-block-header">
+                <span>docker-compose.yml</span>
+                <button type="button" class="btn-copy-code" data-code-target="code-compose-yml"><i data-lucide="copy"></i> Copier</button>
+              </div>
+              <pre id="code-compose-yml">version: "3.9"
+
+services:
+  app:
+    build: .
+    container_name: flask-app
+    restart: always
+    ports:
+      - "5000:5000"</pre>
+            </div>
+
+            <h4>2. Démarrer les services</h4>
+            <p>Lancez Docker Compose en arrière-plan :</p>
+            <div class="code-block-wrapper">
+              <div class="code-block-header">
+                <span>Bash / Terminal</span>
+                <button type="button" class="btn-copy-code" data-code-target="code-compose-up"><i data-lucide="copy"></i> Copier</button>
+              </div>
+              <pre id="code-compose-up">docker compose up -d</pre>
+            </div>
+
+            <h4>3. Vérifier l'état des conteneurs</h4>
+            <div class="code-block-wrapper">
+              <div class="code-block-header">
+                <span>Bash / Terminal</span>
+                <button type="button" class="btn-copy-code" data-code-target="code-docker-ps"><i data-lucide="copy"></i> Copier</button>
+              </div>
+              <pre id="code-docker-ps">docker ps</pre>
+            </div>
+          </div>
+
+          <!-- Step 6 Content -->
+          <div class="workshop-tab-content" id="step-6">
+            <h3>Étape 6 — GitHub Actions (Intégration Continue)</h3>
+            <p>Le workflow CI d'automatisation s'exécutera à chaque modification du code pour s'assurer que l'application compile correctement.</p>
+
+            <h4>1. Créer le fichier de workflow CI</h4>
+            <p>Créez l'arborescence et le fichier YAML : <code>.github/workflows/ci.yml</code> :</p>
+
+            <div class="code-block-wrapper">
+              <div class="code-block-header">
+                <span>ci.yml (GitHub Actions)</span>
+                <button type="button" class="btn-copy-code" data-code-target="code-ci-actions"><i data-lucide="copy"></i> Copier</button>
+              </div>
+              <pre id="code-ci-actions">name: DevOps Starter CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install Dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Build Docker Image
+        run: |
+          docker build -t devops-starter .</pre>
+            </div>
+
+            <h4>2. Commit & Push</h4>
+            <p>Ajoutez ce workflow à votre dépôt Git et poussez-le. GitHub Actions le détectera et démarrera le pipeline automatiquement ! Allez sur l'onglet <strong>Actions</strong> de votre dépôt GitHub pour le suivre en direct.</p>
+          </div>
+
+          <!-- Step 7 Content -->
+          <div class="workshop-tab-content" id="step-7">
+            <h3>Étape 7 — Déploiement sur Ubuntu VPS</h3>
+            <p>Nous allons maintenant déployer manuellement notre application conteneurisée sur un serveur Ubuntu Cloud.</p>
+
+            <h4>1. Se connecter au VPS en SSH</h4>
+            <div class="code-block-wrapper">
+              <div class="code-block-header">
+                <span>Bash / Terminal</span>
+                <button type="button" class="btn-copy-code" data-code-target="code-ssh"><i data-lucide="copy"></i> Copier</button>
+              </div>
+              <pre id="code-ssh">ssh ubuntu@IP_DU_SERVEUR</pre>
+            </div>
+
+            <h4>2. Mettre à jour le VPS et installer Docker</h4>
+            <div class="code-block-wrapper">
+              <div class="code-block-header">
+                <span>Bash / Terminal</span>
+                <button type="button" class="btn-copy-code" data-code-target="code-install-docker-vps"><i data-lucide="copy"></i> Copier</button>
+              </div>
+              <pre id="code-install-docker-vps">sudo apt update && sudo apt upgrade -y
+# Installer Docker via script officiel :
+curl -fsSL https://get.docker.com | sh
+# Installer Docker Compose plugin :
+sudo apt install docker-compose-plugin -y</pre>
+            </div>
+
+            <h4>3. Récupérer et déployer le projet</h4>
+            <div class="code-block-wrapper">
+              <div class="code-block-header">
+                <span>Bash / Terminal</span>
+                <button type="button" class="btn-copy-code" data-code-target="code-vps-deploy"><i data-lucide="copy"></i> Copier</button>
+              </div>
+              <pre id="code-vps-deploy">git clone https://github.com/votre-user/devops-starter.git
+cd devops-starter
+docker compose up -d</pre>
+            </div>
+            <p>Vous pouvez maintenant accéder au site via <code>http://IP_DU_SERVEUR:5000</code>.</p>
+          </div>
+
+          <!-- Step 8 Content -->
+          <div class="workshop-tab-content" id="step-8">
+            <h3>Étape 8 — Configurer Nginx en Reverse Proxy</h3>
+            <p><strong>Nginx</strong> va recevoir les requêtes sur le port standard HTTP (80) et les rediriger vers notre conteneur Flask (5000).</p>
+
+            <h4>1. Installer Nginx sur le serveur</h4>
+            <div class="code-block-wrapper">
+              <div class="code-block-header">
+                <span>Bash / Terminal</span>
+                <button type="button" class="btn-copy-code" data-code-target="code-nginx-install"><i data-lucide="copy"></i> Copier</button>
+              </div>
+              <pre id="code-nginx-install">sudo apt install nginx -y</pre>
+            </div>
+
+            <h4>2. Configurer le bloc serveur (Reverse Proxy)</h4>
+            <p>Créez un nouveau fichier de configuration :</p>
+            <div class="code-block-wrapper">
+              <div class="code-block-header">
+                <span>Bash / Terminal</span>
+                <button type="button" class="btn-copy-code" data-code-target="code-nginx-edit"><i data-lucide="copy"></i> Copier</button>
+              </div>
+              <pre id="code-nginx-edit">sudo nano /etc/nginx/sites-available/devops</pre>
+            </div>
+            <p>Collez la configuration suivante (remplacez <code>monsite.com</code> par votre nom de domaine) :</p>
+            
+            <div class="code-block-wrapper">
+              <div class="code-block-header">
+                <span>Nginx Config</span>
+                <button type="button" class="btn-copy-code" data-code-target="code-nginx-conf"><i data-lucide="copy"></i> Copier</button>
+              </div>
+              <pre id="code-nginx-conf">server {
+    listen 80;
+    server_name monsite.com www.monsite.com;
+
+    location / {
+        proxy_pass http://localhost:5000;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+}</pre>
+            </div>
+
+            <h4>3. Activer et redémarrer Nginx</h4>
+            <div class="code-block-wrapper">
+              <div class="code-block-header">
+                <span>Bash / Terminal</span>
+                <button type="button" class="btn-copy-code" data-code-target="code-nginx-start"><i data-lucide="copy"></i> Copier</button>
+              </div>
+              <pre id="code-nginx-start"># Créer le lien symbolique d'activation :
+sudo ln -s /etc/nginx/sites-available/devops /etc/nginx/sites-enabled/
+# Tester la syntaxe :
+sudo nginx -t
+# Redémarrer :
+sudo systemctl restart nginx</pre>
+            </div>
+          </div>
+
+          <!-- Step 9 Content -->
+          <div class="workshop-tab-content" id="step-9">
+            <h3>Étape 9 — Installer Let's Encrypt SSL</h3>
+            <p>Pour passer en HTTPS et crypter le trafic, nous installons un certificat SSL gratuit fourni par l'autorité Let's Encrypt.</p>
+
+            <h4>1. Installer Certbot pour Nginx</h4>
+            <div class="code-block-wrapper">
+              <div class="code-block-header">
+                <span>Bash / Terminal</span>
+                <button type="button" class="btn-copy-code" data-code-target="code-certbot-install"><i data-lucide="copy"></i> Copier</button>
+              </div>
+              <pre id="code-certbot-install">sudo apt install certbot python3-certbot-nginx -y</pre>
+            </div>
+
+            <h4>2. Générer le certificat et configurer le SSL</h4>
+            <p>Certbot analysera votre configuration Nginx et installera automatiquement le certificat SSL.</p>
+            <div class="code-block-wrapper">
+              <div class="code-block-header">
+                <span>Bash / Terminal</span>
+                <button type="button" class="btn-copy-code" data-code-target="code-certbot-run"><i data-lucide="copy"></i> Copier</button>
+              </div>
+              <pre id="code-certbot-run">sudo certbot --nginx</pre>
+            </div>
+            <p><em>Renseignez votre e-mail, acceptez les conditions, et demandez à Certbot de <strong>rediriger (Redirect)</strong> tout le trafic HTTP vers HTTPS.</em></p>
+
+            <h4>3. Tester le renouvellement automatique</h4>
+            <p>Les certificats Let's Encrypt durent 90 jours. Certbot configure un cron job pour les renouveler automatiquement. Testez-le :</p>
+            <div class="code-block-wrapper">
+              <div class="code-block-header">
+                <span>Bash / Terminal</span>
+                <button type="button" class="btn-copy-code" data-code-target="code-certbot-renew"><i data-lucide="copy"></i> Copier</button>
+              </div>
+              <pre id="code-certbot-renew">sudo certbot renew --dry-run</pre>
+            </div>
+          </div>
+
+          <!-- Step 10 Content -->
+          <div class="workshop-tab-content" id="step-10">
+            <h3>Étape 10 — Validation finale</h3>
+            <p>L'application est maintenant déployée de manière sécurisée en production.</p>
+            
+            <div class="workshop-highlight-box success">
+              <h4><i data-lucide="check-circle2"></i> Check-list de recette</h4>
+              <ul>
+                <li>Ouvrez <code>https://monsite.com</code> sur votre navigateur.</li>
+                <li>Vérifiez la présence du cadenas vert (SSL Actif).</li>
+                <li>Vérifiez que la page d'accueil affiche <code>Bienvenue au cours DevOps 🚀</code>.</li>
+                <li>Vérifiez l'endpoint de diagnostic <code>https://monsite.com/health</code>.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Conclusion Content -->
+          <div class="workshop-tab-content" id="step-conclusion">
+            <h3>Bonnes Pratiques DevOps</h3>
+            <p>Travailler en mode DevOps implique de respecter certaines règles de l'art pour maintenir la sécurité, la stabilité et l'agilité de vos déploiements.</p>
+            
+            <div class="good-practices-grid">
+              <div class="practice-card">
+                <h5><i data-lucide="shield-alert" class="purple-icon"></i> Ne jamais versionner de secrets</h5>
+                <p>N'ajoutez jamais de mots de passe, jetons ou clés d'API dans votre dépôt Git. Utilisez des variables d'environnement (fichiers <code>.env</code>) ou les <strong>GitHub Secrets</strong>.</p>
+              </div>
+              <div class="practice-card">
+                <h5><i data-lucide="git-merge" class="purple-icon"></i> Stratégie de branches</h5>
+                <p>N'écrivez pas directement sur <code>main</code> en production. Utilisez des branches thématiques (features) et validez via Pull Requests après succès du pipeline de tests.</p>
+              </div>
+              <div class="practice-card">
+                <h5><i data-lucide="tag" class="purple-icon"></i> Tagging des images</h5>
+                <p>Ne vous contentez pas du tag <code>latest</code> en production. Taguez vos images Docker avec des numéros de version sémantique (ex: <code>v1.0.0</code>) pour pouvoir faire des rollbacks (retours en arrière) instantanés.</p>
+              </div>
+              <div class="practice-card">
+                <h5><i data-lucide="bar-chart3" class="purple-icon"></i> Monitoring & Logs</h5>
+                <p>Surveillez la santé de vos applications avec des endpoints de diagnostic (<code>/health</code>) et utilisez les commandes Docker pour debugger : <code>docker logs flask-app</code>.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Speaker Bio Section -->
+    <section id="formateur" class="speaker-section container">
+      <div class="section-title-wrapper">
+        <h2 class="section-title">L'Animateur</h2>
+        <p class="section-description">Rencontrez l'expert chevronné qui dirigera cette session interactive.</p>
+      </div>
+
+      <div class="speaker-card">
+        <div class="speaker-photo-wrapper">
+          <div class="speaker-photo">
+            <i data-lucide="user-check"></i>
+            <span>Dr. O. BAKKALI YEDRI</span>
+          </div>
+        </div>
+        <div class="speaker-info">
+          <h3>Dr. OTHMAN BAKKALI YEDRI</h3>
+          <span class="speaker-title">Directeur & Formateur DevOps/Cloud</span>
+          <p class="speaker-bio">
+            Expert passionné par l'architecture logicielle, la conteneurisation et l'automatisation des infrastructures (CI/CD). Consultant et professeur universitaire, il accompagne les organisations dans leur transformation Cloud/DevOps et forme la prochaine génération d'ingénieurs en ingénierie de livraison continue.
+          </p>
+          <div class="speaker-credentials">
+            <span class="credential-tag"><i data-lucide="award"></i> Ph.D en Informatique</span>
+            <span class="credential-tag"><i data-lucide="cloud"></i> Architecte Solutions Cloud</span>
+            <span class="credential-tag"><i data-lucide="shield"></i> DevSecOps Practitioner</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Engagement Section: Interactive Comments & Sharing -->
+    <section id="participer" class="engagement-section container">
+      <div class="section-title-wrapper">
+        <h2 class="section-title">Confirmer ma Participation</h2>
+        <p class="section-description">Pour valider votre inscription, commentez « Interested » et partagez le webinaire avec votre réseau !</p>
+      </div>
+
+      <div class="engagement-grid">
+        <!-- Live Comments Feed Panel -->
+        <div class="comments-panel">
+          <h3 style="margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem;">
+            <i data-lucide="message-square" style="color: var(--neon-cyan);"></i> Fil de Discussion
+          </h3>
+          
+          <div class="comment-input-box">
+            <form id="comment-form">
+              <div class="comment-textarea-wrapper">
+                <div class="comment-user-avatar">M</div>
+                <div class="comment-input-fields">
+                  <input type="text" id="comment-input-name" class="comment-inline-input" placeholder="Votre nom complet" required>
+                  <input type="text" id="comment-input-role" class="comment-inline-input" placeholder="Votre profil (ex: Étudiant IT, Dév...)">
+                  <textarea id="comment-textarea" class="comment-textarea" required>Interested</textarea>
+                </div>
+              </div>
+              <div class="comment-submit-bar">
+                <button type="submit" class="btn-comment">Commenter</button>
+              </div>
+            </form>
+          </div>
+
+          <div class="comments-feed" id="comments-feed">
+            {% for comment in default_comments %}
+            <div class="comment-item" data-default="true">
+              <div class="comment-item-avatar">{{ comment.name|slice:":2"|upper }}</div>
+              <div class="comment-item-content">
+                <div class="comment-item-header">
+                  <div>
+                    <span class="comment-item-name">{{ comment.name }}</span>
+                    <span class="comment-item-role"> • {{ comment.role }}</span>
+                  </div>
+                  <span class="comment-item-time">{{ comment.time }}</span>
+                </div>
+                <p class="comment-item-text">{{ comment.text }}</p>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+
+        <!-- Share Widget Panel -->
+        <div class="share-panel">
+          <h3 style="display: flex; align-items: center; gap: 0.5rem;">
+            <i data-lucide="share-2" style="color: var(--neon-purple);"></i> Inviter vos Contacts
+          </h3>
+          <p style="font-size: 0.9rem; color: var(--text-gray-400);">Partagez ce webinaire gratuit avec les développeurs débutants, étudiants IT et passionnés du Cloud de votre réseau.</p>
+          
+          <div class="share-card-info">
+            <strong>Action Requise :</strong> Commentez <em>"Interested"</em> ci-contre et copiez/partagez l'invitation ci-dessous.
+          </div>
+
+          <div class="share-copy-container">
+            <span style="font-size: 0.85rem; font-weight: 600; color: var(--text-gray-300);">Message à partager :</span>
+            <div class="share-preview-box" id="share-preview">Je participe au webinaire gratuit DevOps organisé par l'IT Tech Académie et animé par Dr. Othman Bakkali Yedri ! 
+
+Au programme :
+✅ Comprendre le rôle de DevOps
+✅ Versionner son code avec Git
+✅ Découvrir Docker et la conteneurisation
+✅ Comprendre le workflow CI/CD
+
+🗓️ Date : Samedi 25 Juillet 2026 à 19h00 (Rabat)
+🎟️ Inscription gratuite : https://lnkd.in/d-rSNjM5
+
+#ITTechAcademie #DevOps #Git #Docker #CICD #Cloud #WebinaireGratuit #Maroc</div>
+            <button type="button" class="btn-copy-share" id="btn-copy-share">
+              <i data-lucide="copy"></i> Copier le message
+            </button>
+          </div>
+
+          <div class="social-share-buttons">
+            <button type="button" class="btn-social-share btn-linkedin" id="btn-share-linkedin">
+              <i data-lucide="linkedin"></i> Partager sur LinkedIn
+            </button>
+            <button type="button" class="btn-social-share btn-whatsapp" id="btn-share-whatsapp">
+              <i data-lucide="phone"></i> Partager par WhatsApp
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Success Modal Overlay (celebration dialog) -->
+  <div class="modal-overlay" id="success-modal-overlay">
+    <div class="success-modal">
+      <button class="modal-close" id="modal-close"><i data-lucide="x"></i></button>
+      <div class="success-icon-wrapper">
+        <i data-lucide="check-circle2"></i>
+      </div>
+      <h2>Presque Inscrit, <span id="registrant-name" style="color: var(--neon-cyan);"></span> !</h2>
+      <p>Votre demande de participation a été pré-enregistrée dans notre base de données locale. Suivez maintenant les deux étapes finales pour valider définitivement votre accès :</p>
+      
+      <div class="modal-steps">
+        <div class="modal-step-item">
+          <div class="step-num">1</div>
+          <div class="step-content">
+            Cliquez sur le bouton ci-dessous pour remplir le formulaire officiel d'invitation <strong>IT Tech Académie</strong>.
+          </div>
+        </div>
+        <div class="modal-step-item">
+          <div class="step-num">2</div>
+          <div class="step-content">
+            Laissez un commentaire <strong>"Interested"</strong> dans notre fil de discussion ci-dessous et partagez avec votre entourage.
+          </div>
+        </div>
+      </div>
+
+      <a href="https://lnkd.in/d-rSNjM5" target="_blank" class="btn-external-register">
+        <i data-lucide="external-link"></i> Finaliser l'Inscription Officielle (lnkd.in)
+      </a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="logo-wrapper">
+        <div class="logo-icon" style="box-shadow: none;">&lt;/&gt;</div>
+        <span class="logo-text" style="font-size: 1.15rem;">IT Tech Académie</span>
+      </div>
+      <div class="footer-links">
+        <a href="#programme">Programme</a>
+        <a href="#formateur">Animateur</a>
+        <a href="#participer">Participation</a>
+      </div>
+      <p class="copyright">
+        © 2026 IT Tech Académie. Tous droits réservés. Animé par <span class="accent">Dr. Othman Bakkali Yedri</span>.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Lucide Icons Library Injection & Activation -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+
+  <!-- Custom Application Script -->
+  <script src="{% static 'js/app.js' %}"></script>
+</body>
+</html>
